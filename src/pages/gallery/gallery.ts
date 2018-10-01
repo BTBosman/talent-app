@@ -23,6 +23,7 @@ export class GalleryPage {
   }
 
   ionViewDidLoad() {
+    this.myVideos.length = 0;
     this.firebaseService.getUploads().then((data2:any) =>{
       if (this.myVideos != null || this.myVideos != undefined){
         this.myVideos = undefined;

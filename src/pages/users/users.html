@@ -2,10 +2,10 @@
    <ion-header>
       <ion-navbar color = "own" >
         <button ion-button menuToggle icon-only>
-          <ion-icon name='menu'></ion-icon>
+          <ion-icon name='md-menu'></ion-icon>
         </button>
        
-        <ion-title><ion-icon name="flame"></ion-icon>&emsp;Top Trending        </ion-title>
+        <ion-title><ion-icon name="md-flame"></ion-icon>&emsp;Top Trending        </ion-title>
       </ion-navbar>
      
     </ion-header>
@@ -36,13 +36,13 @@
                 <ion-row>
                     <ion-col>
                       <button color={{i.color}} ion-button icon-start clear small (click)="like(a)">
-                        <ion-icon name="thumbs-up"></ion-icon>
+                        <ion-icon name="md-thumbs-up"></ion-icon>
                         <div>{{i.likes}} Likes</div>
                       </button>
                     </ion-col>
                     <ion-col>
                       <button  ion-button class="com" icon-start clear small center (click)="test(a)">
-                        <ion-icon name="text"></ion-icon>
+                        <ion-icon name="md-text"></ion-icon>
                         <div>{{i.comments}} Comments</div>
                       </button>
                     </ion-col>
@@ -58,7 +58,7 @@
      
   <ion-fab  fixed bottom right  >
     <button class="fabi" ion-fab  (click) = "Upload()" color = "own">
-      <ion-icon name="add"></ion-icon>  
+      <ion-icon name="md-add"></ion-icon>  
     </button>
   </ion-fab>
 

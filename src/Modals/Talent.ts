@@ -5,6 +5,10 @@ export interface Talent{
     surname:string;
     gender:string;
     cellno:number;
-    age:number;
+    age:string;
     username:string;
+    compName : string;
+    compEmail:string;
+    compTel :string;
+    Bio :string;
 }

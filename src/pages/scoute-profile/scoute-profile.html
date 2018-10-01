@@ -1,23 +1,28 @@
 <ion-header *ngFor="let i of scout;">
     <div class="section">
     
-    
-      <ion-navbar color = "color" ></ion-navbar>
-    <div class="logo" align="center">
+      <ion-navbar color = "color" >
+          <button ion-button menuToggle icon-only>
+              <ion-icon name='menu'></ion-icon>
+            </button>
+      </ion-navbar>
+      <div class="logo" align="center">
       <img src="../../assets/Pics/2372f27612fee17412c8e647fd76c199.jpg" >
-    <h1>{{i.name}}</h1>
+     <button class="btn" ion-button color="light" (click)="update()"><ion-icon class="ii"  name="md-settings"></ion-icon></button>
+      <h1 class="head">{{i.name}}</h1>
     </div>
-    <p class="p1">Scout</p>
-    <div class="dash">
+   
+    <!-- <p class="p1">Scout</p> -->
+    <!-- <div class="dash" align = "center">
      <p><ion-icon name="logo-twitter"></ion-icon><br>
     follower | <br> 1 000</p>
     <br>
-    <p><ion-icon name="thumbs-up"></ion-icon> <br> Likes |<br>23</p>
+    <p><ion-icon name="md-thumbs-up"></ion-icon> <br> Likes |<br>23</p>
     <br>
-    <p><ion-icon name="text"></ion-icon> <br> comments | <br>80</p>
+    <p><ion-icon name="md-text"></ion-icon> <br> comments | <br>80</p>
     <br>
     <br>
-    </div>
+    </div> -->
     
     </div>
     
@@ -25,15 +30,18 @@
     
     
     <ion-content  class="img">
-    <ion-card *ngFor="let i of scout;">
+      <!-- <div align = "center" >
+     <h1> Your Profile </h1>
+    </div> -->
+    <ion-card class="deck" *ngFor="let i of scout;">
       <ion-card-content>
         <ion-list>
           <div class="info">
-          <p><ion-icon class="i" name="call"></ion-icon>Company Name</p>
+          <p><ion-icon class="i" name="md-call"></ion-icon>Company Name</p>
           <h3  class="details">{{i.companyName}}</h3>
-          <p><ion-icon class="i" name="call"></ion-icon>Company Tel.</p>
+          <p><ion-icon class="i" name="md-call"></ion-icon>Company Tel.</p>
           <h3  class="details">{{i.companycellno}}</h3>
-          <p><ion-icon name="at" class="i"></ion-icon>Company E-mail</p>
+          <p><ion-icon name="md-at" class="i"></ion-icon>Company E-mail</p>
           <h3  class="details">{{i.companyemail}}</h3>
           <!-- 
           <p><ion-icon class="i" name="call"></ion-icon>Mobile</p>

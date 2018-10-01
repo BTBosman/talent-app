@@ -3,25 +3,43 @@ page-scoute-profile {
     .section{
         background-image:linear-gradient(#F53D4E,rgba(0,0,0,0.5)), url('../../assets/imgs/video.jpg');
         background-attachment: fixed;
-        background-color: black;
+        // background-color: black;
         background-size: cover;
-        height: 41vh;
+        height: 50vh;
        background-repeat: no-repeat;
        background-position: center;
     }
     ion-card.card{
-        box-shadow: 2px 2px 4px;
-        border-radius: 12px;
+        box-shadow: 2px 2px 4px 1px;
+        border-radius: 11px;
+        margin-top: 10%;
     }
-
+.ii{
+   font-size: 20px;
+}
     img{
-        height: 100px;
-        width: 100px;
-        border-radius: 50px;
+        height: 150px;
+        width: 150px;
+        border-radius: 80px;
+    }
+   
+    .btn{
+        position: relative;
+        bottom: 10px;
+        right: 15%;
+        color: #F53D4E;
+        border-radius: 80%;
+        width: 50px;
+        height: 50px;
+        font-size: 70%;
+        // border:solid 2px #F53D4E;
+        }
+    .deck{
+        top: 60px;
     }
     .p1{
         text-align: center;
-        margin-bottom: 1px;
+        // margin-bottom: 10px;
 
     }
     .details{
@@ -29,6 +47,8 @@ page-scoute-profile {
         // margin-bottom: 1px;
     }
     .dash{
+        bottom: 2vh;
+        position: relative;
         display: flex;
         align-content: center;
         text-align: center;
@@ -45,6 +65,10 @@ page-scoute-profile {
     h1{
         color: whitesmoke;
         font-size: 40px;
+      
+    }
+    .head{
+        bottom: 20%;
     }
     .i{
         margin: 25px;

@@ -27,11 +27,14 @@ import { ArtisthomePage } from '../pages/artisthome/artisthome';
 import { ArtistProfileUpdatePage } from '../pages/artist-profile-update/artist-profile-update';
 import { ScoutProfileUpdatePage } from '../pages/scout-profile-update/scout-profile-update';
 import { ScouteProfilePage } from '../pages/scoute-profile/scoute-profile';
+
 import { DisplayPage } from '../pages/display/display';
 import { UploadPreviewPage } from '../pages/upload-preview/upload-preview';
 import {MessagePage } from '../pages/message/message'
 import { SeeMessagesPage } from '../pages/see-messages/see-messages'
 import { GalleryPage } from '../pages/gallery/gallery';
+
+
 
 
 @NgModule({

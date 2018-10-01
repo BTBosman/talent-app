@@ -33,7 +33,7 @@ export class LogoutPage {
           text: 'Agree',
           handler: () => {
             console.log('Agree clicked');
-            this.firebaseService.authnticate.signOut();
+            this.firebaseService.logout();
             this.navCtrl.push(LoginPage);
           }
         }

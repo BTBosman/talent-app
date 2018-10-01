@@ -34,9 +34,20 @@ export class DisplayPage {
     this.viewCtrl.dismiss();
   }
   Message(){
-    this.username = this.firebaseService.getDefaultPath();
-    console.log(this.username);
-    this.firebaseService.getConversation(this.navParams.get('user'));
-    this.navCtrl.push(MessagePage, {username:this.username , name2:this.navParams.get('user')})
+    console.log('message')
+    this.firebaseService.getConversation(this.navParams.get('user')).then(data =>{
+      console.log(data);
+      if (data =='no path'){
+        var user =  this.firebaseService.getusername() + ":" +  this.navParams.get('user');
+        console.log('no path, creating one ' + user);
+        this.navCtrl.push(MessagePage, {username:user, name2:this.navParams.get('user')})
+      }
+      else {
+        this.username = this.firebaseService.getDefaultPath();
+        console.log(this.username);
+        this.navCtrl.push(MessagePage, {username:this.username , name2:this.navParams.get('user')})
+      }
+    });
+
   }
 }

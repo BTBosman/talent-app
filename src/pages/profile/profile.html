@@ -1,124 +1,62 @@
-
-
-<!-- <ion-header>
-        <div  *ngFor="let i of arr2;" class="img" align="center">
+<ion-header>
+        <div *ngFor="let i of arr2;" class="img" align="center">
       <ion-navbar color="trans">
-        <ion-title></ion-title>
-            <button ion-button menuToggle icon-only>
-                    <ion-icon name='menu'></ion-icon>
-                  </button>
-        <ion-title>Your Profile</ion-title>
+        <button style="color: white" ion-button menuToggle icon-only>
+        <ion-icon name='menu'></ion-icon>
+        </button>
      </ion-navbar>
-      
-      <img class="pic" src="{{i.imageURl}}">
-      <h1>{{i.name}} {{i.surname}}</h1>
-      
+     <div class="mac">
+      <img class="pics" src="{{i.imageURl}}">
+      <br>
+      <h1 class="nam">{{i.name}}</h1>
+    </div>
+    <div class = "dash1">
       <ion-grid class="dash">
       <ion-row>
-        <ion-col>
-            <ion-icon name="logo-twitter"></ion-icon><br>
-            Followers<br><br>
+        <ion-col class="space">
+                <ion-icon name="videocam"></ion-icon><br>
+            Uploads<br><br>
             10,000
         </ion-col>
-      
-        <ion-col>
+        <ion-col class="space">
             <ion-icon name="thumbs-up"></ion-icon><br>
             Likes<br><br>
             20,000
         </ion-col>
-      
-        <ion-col>
+        <ion-col class="space">
             <ion-icon name="text"></ion-icon><br>
             Comments<br><br>
             10,000
         </ion-col>
       </ion-row>
       </ion-grid>
-      <button class="btn" ion-button color="own" (click)="Update()"><ion-icon name="add"></ion-icon></button>
-      
+    </div>
       </div>
+      <ion-icon class="sbtn" name="settings"></ion-icon>
       </ion-header>
-      
-      
       <ion-content *ngFor="let i of arr2;" class="cont">
+        <div align="center">
+            <button class="btn" ion-button color="own" (click)="Update()" outline>Edit Profile</button>
+        </div>
         <div align="center">
             <h2>Your Vid'It profile</h2>
           </div>
           <br>
+          <h3>{{i.name}} {{i.surname}}</h3>
+          <h4>{{i.gender}} | {{i.age}}</h4>
+     
           <div>
-      <ion-list class="list">
-        <p><ion-icon name="contact"></ion-icon>&emsp;{{i.name}}</p>
-        <p><ion-icon name="contact"></ion-icon>&emsp;{{i.surname}}</p>
-        <p><ion-icon name="transgender"></ion-icon>&emsp;{{i.gender}}</p>
-        <p><ion-icon name="call"></ion-icon>&emsp;{{i.cellno}}</p>
-        <p><p><ion-icon name="contact"></ion-icon>&emsp;Age: {{i.age}}</p>
-      </ion-list>
-      
+            <ion-grid class="things" align="center">
+                <ion-row>
+                    <ion-col>
+                        <img src="../../assets/imgs/phone (1).png"><br>
+                        <p>{{i.cellno}}</p>
+                    </ion-col>
+                    <ion-col>
+                        <img src="../../assets/imgs/close-envelope.png"><br>
+                        <p>JorjaSmith23@gmail.com</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
       </div> 
       </ion-content>
-    </ion-row>
-  </ion-grid>
-</ion-content> -->
-
-<ion-header>
-    <div *ngFor="let i of arr2;" class="img" align="center">
-  <ion-navbar color="trans">
-        <button style="color: white" ion-button menuToggle icon-only>
-         <ion-icon name='menu'></ion-icon>
-        </button>
-    <!-- <ion-title class="tite">Your Profile</ion-title> -->
- </ion-navbar>
- <img class="pic" src="{{i.imageURl}}">
- <h1>{{i.name}} {{i.surname}}</h1>
-  <ion-grid class="dash">
-  <ion-row>
-    <ion-col class="space">
-            <ion-icon name="videocam"></ion-icon><br>
-        Uploads<br><br>
-        10,000
-    </ion-col>
-    <ion-col class="space">
-        <ion-icon name="thumbs-up"></ion-icon><br>
-        Likes<br><br>
-        20,000
-    </ion-col>
-    <ion-col class="space">
-        <ion-icon name="text"></ion-icon><br>
-        Comments<br><br>
-        10,000
-    </ion-col>
-  </ion-row>
-  </ion-grid>
-  <button class="btn" ion-button color="light" (click)="Update()"><ion-icon name="settings"></ion-icon></button>
-  </div>
-  </ion-header>
-  <ion-content *ngFor="let i of arr2;" class="cont">
-    <div align="center">
-        <h2>Your Vid'It profile</h2>
-      </div>
-      <br>
-      <h3>{{i.name}} {{i.surname}}</h3>
-      <h4>{{i.gender}} | {{i.age}}</h4>
-      <div>
-
-          <hr>
-
-        <ion-grid align="center">
-            <ion-row>
-                <ion-col>
-                    <img src="../../assets/imgs/phone (1).png"><br>
-                    <p>{{i.cellno}}</p>
-                </ion-col>
-
-                <ion-col>
-                    <img src="../../assets/imgs/close-envelope.png"><br>
-                    <p>JorjaSmith23@gmail.com</p>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-
- 
-  </div> 
-  </ion-content>
-
-

@@ -1,31 +1,41 @@
 page-home {
 
-//     font-family: 'Ubuntu', sans-serif;
-//    .section{
-//        background-image:linear-gradient(#F53D4E,rgba(0,0,0,0.5)), url('../../assets/imgs/video.jpg');
-//        background-attachment: fixed;
-//        background-color: black;
-//        background-size: cover;
-//        height: 38vh;
-//        // box-shadow: 2px 2px 4px;
-//       background-repeat: no-repeat;
-//       background-position: center;
-
-
-    // font-family: 'Ubuntu', sans-serif;
 
 
 
-    // }
+  
     ion-card.card{
         border-radius: 12px;
-        // box-shadow: 2px 2px 4px;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.363);
+        position: relative;
+    
+        top: 30%;
+    
     }
 
-
-   // }
-
+    .butts{
+        // margin-right: 10px;
+        text-align: center;
+        // margin-left: 180px;
+        
+        // margin: 0 auto;
+     
+        // float: right;
+    }
+    .v{
+        // margin-left: 10px;
+    }
+    .vid{
+        // text-align: center;
+        // top: 30%;
+    }
+ 
+.vdo{
+    
+    // height: 260px;
+    // width: 490px;
+    // text-align: center;
+}
   .combo{
     //    box-shadow: 2px 2px 4px;
        margin-block-end: 20px;
@@ -57,8 +67,7 @@ page-home {
  
    }
    .head{
-    //    background-color: #F53D4E;
-    //    box-shadow: 2px 2px 4px;
+    
        color: rgb(248, 245, 245);
        text-shadow: 2px 2px 3px black;
     //    text-shadow: 5px 3px 3px ;
@@ -67,11 +76,7 @@ page-home {
        border-radius: 8px;
        padding: 10px;
  
-    //    border-bottom-left-radius: 100%;
-    //    border-top-right-radius: 10px;
-    //    border-bottom-right-radius: 100%;
-    //    border-top-left-radius: 10px;
-    //    box-shadow: 2px 2px 4px;
+  
    }
    .tem{
        background-color: rgba(90, 82, 82, 0.562);
@@ -92,17 +97,7 @@ page-home {
        margin-bottom: 20px;
 
  }
-// .item{
-//     margin-bottom: 20px;
-//     border-radius: 20px;
-//     // font-family: 'Original Surfer', cursive;
-//     font-family: 'Courgette', cursive;
-//     // font-family: 'Pacifico', cursive;
-//     // background-color: rgba(165, 109, 4, 0.747);
-//       box-shadow: 2px 2px 4px black;
-//            overflow:visible;
 
-//   }
  h1{
     color: whitesmoke;
     position: relative;
@@ -118,7 +113,7 @@ page-home {
  
  .card1{
     position: relative;
-    top: 15%;
+    top: 28%;
     border-radius: 12px;
     color: black;
     background-color: rgba(0, 0, 0, 0.363);
@@ -130,19 +125,14 @@ page-home {
     background-color: rgba(0, 0, 0, 0.363);
     position: relative;
 
-    top: 15%;
+    top: 30%;
 
 }
 
 .butt{
-
-    width: 80%;
- 
+    width: 50%;
  }
  
- .butt2{
-    width: 80%;
- }
  
  }
  

@@ -1,26 +1,29 @@
-
-
 page-login {
    
     .img{
-    background-image:linear-gradient(#F53D4E,rgba(0,0,0,0.5)), url('../../assets/imgs/video.jpg');
+    background-image:linear-gradient(#F53D4E,#1e2a78), url('../../assets/imgs/video.jpg');
     background-attachment: fixed;
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     }
- 
     .item{
-        background-color: rgba(255, 255, 255, 0.192);
-        color: white;
+        background-color: rgba(255, 255, 255, 0.171);
+        color: rgb(255, 255, 255);
         width: 80%;
-        text-align: center;
         position: relative;
+        left: 2%;
+        top: 50px;
         border-radius: 30px;
-        
+        padding-left: 7%;
+        font-size: 1.3em;
+        font-weight: 100;
+  }
+    .list{
+        position: relative;
+        top: 8%;
     }
- 
     h1{
         color: rgb(236, 217, 217);
         text-align: center;
@@ -28,20 +31,32 @@ page-login {
         font-size: 400%;
        font-weight: 100;
     }
- 
+    
    .butt{
+       position: relative;
+       bottom: 25%;
        text-align: center;
-       margin-bottom: 10%;
-   }
- 
+    //    margin-bottom: 10%;
+     
+   } 
+    .btn1{
+        width: 80%;
+        position: relative;
+        left: 10%;
+        top: 60px;
+      
+    }
     .btn{
         width: 80%;
         position: relative;
         left: 10%;
-        top: 95px;
- 
+        top: 50px;
+        // padding:3px;
+        font-weight: 100;
+        font-size: 1.3em;
+        color: white;
     }
- 
+  
     p{
         color: white;
         text-align: center;
@@ -55,10 +70,15 @@ page-login {
         position: relative;
         top: 2%;
      }
- 
      .pass{
          position: relative;
          left: 80px;
         top: 10%;
         }
+        
+    
     }
+
+
+
+

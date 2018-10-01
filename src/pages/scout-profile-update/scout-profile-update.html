@@ -11,7 +11,7 @@
   <div class="logo" align="center">
       <img src="../../assets/Pics/2372f27612fee17412c8e647fd76c199.jpg" >
       <h1>Jorja Smith</h1>
-      <button class="btn" ion-button color="own" round (click)="takePicture()"><ion-icon name="add"></ion-icon></button>
+      <button class="btn" ion-button color="own" round (click)="takePicture()"><ion-icon name="md-add"></ion-icon></button>
 
     </div>
 </div>
@@ -24,30 +24,30 @@
   <h2>Edit your Profile</h2>
 <br>
 
-    <ion-list no-lines>
+    <ion-card-content >
 
       <ion-item>
-        <ion-label><ion-icon name="contact"></ion-icon>        </ion-label>
+        <ion-label><ion-icon name="md-contact"></ion-icon>        </ion-label>
         <ion-input placeholder = "Username" type="text" ></ion-input>
       </ion-item>
     
       <ion-item>
-        <ion-label><ion-icon name="at" class="i"></ion-icon></ion-label>
+        <ion-label><ion-icon name="md-at" class="i"></ion-icon></ion-label>
         <ion-input placeholder = "E-mail" type="text"></ion-input>
       </ion-item>
 
    
       <ion-item>
-        <ion-label><ion-icon name="home"></ion-icon></ion-label>
+        <ion-label><ion-icon name="md-home"></ion-icon></ion-label>
         <ion-input placeholder = "Company Name" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
-          <ion-label><ion-icon name="call"></ion-icon></ion-label>
+          <ion-label><ion-icon name="md-call"></ion-icon></ion-label>
           <ion-input placeholder = "Company No." type="text"></ion-input>
         </ion-item>
     
-    </ion-list>
+    </ion-card-content>
 <div class="butt">
     <button ion-button round color = "own">Update profile</button>
   </div>

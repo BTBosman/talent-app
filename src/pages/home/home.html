@@ -3,27 +3,31 @@
 
 
 
-    <div class="section">
-    <ion-navbar color = "own" >
-      <h2 align="center">Upload your video</h2>
-    <button ion-button menuToggle icon-only>
+    <!-- <div class="section"> -->
+        <div class="vid">
+            <video class="vdo"  controls height="320" width="595" *ngFor ="let i of videos">
+    <!-- <ion-navbar color = "color" > -->
+      <!-- <h2 align="center">Upload your video</h2> -->
+    <!-- <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
-    </button>
-    </ion-navbar>
+    </button> -->
 
-    <div class="logo" align="center">
-      <!-- <img class="logo" src="../../assets/imgs/play-button (1).png"> -->
-    </div>
-    <!-- <h1 align="center"></h1> -->
-    </div>
-
+    <!-- </ion-navbar> -->
+   
+           <source class="v" [src]="i" type="video/mp4">
+             <source class="v" [src]="i" type="video/mkv">
+         </video>
+       </div>
+    <!-- </div> -->
+    
     </ion-header>
-
+  
 <ion-content class="img">
 
 
   <h1 align="center" class="head">video preview</h1>
   <br>
+ 
   <ion-card class="card1"> 
     <ion-item class="item item-trns text-center">
       <input type="file" (change)="insertvid($event)" >
@@ -70,15 +74,13 @@
 
 
 
-      <div  align = "center" >
-          <button class="butt" (click)="upload()" round color = "own" block ion-button>Upload</button>
-
-
-          <button class="butt2" ion-button round color="own" (click)="preview()">Preview</button>
+      <div class="butts"  align = "center" >
+          <button class="butt" (click)="upload()" round color = "own"  ion-button>Upload</button>
      </div>
   <!-- <button (click)="upload()" ion-button>upload</button> -->
   <!-- <button ion-button round color="own" (click)="preview()">Preview</button> -->
   <!-- </ion-content> -->
  </ion-card-content>
 </ion-card> 
+
 </ion-content>

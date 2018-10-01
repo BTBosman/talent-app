@@ -40,7 +40,6 @@ export class MyApp {
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private firebaseService:FirebaseProvider) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
 if('Log-Out')
     this. firebaseService.getUserSatate().then( data =>{
       if (data == 1){
@@ -49,43 +48,44 @@ if('Log-Out')
         if (data == "normalPerson"){
           this.rootPage = UsersPage;
           this.pages = [
-           { title: 'Home1', component: ArtisthomePage, icon: "home"},
+           { title: 'Home', component: ArtisthomePage, icon: "md-home"},
             // { title: 'Home', component: UsersPage },
-            { title: 'Share', component: HomePage, icon: "send" },
-            { title: 'Log-Out', component: LogoutPage, icon: "log-out" },
-            { title: 'Messages', component: SeeMessagesPage, icon: "mail" }
-
-
+            { title: 'Share', component: HomePage, icon: "md-send" },
+            { title: 'Log-Out', component: LogoutPage, icon: "md-log-out" },
+            { title: 'Messages', component: SeeMessagesPage, icon: "md-mail" }
           ]
         }
         else if (data == "talentPerson"){
+      if (data == 1){   
+        this.firebaseService.getuserType().then(() =>{
           this.pages = [
             { title: 'Home', component: ArtisthomePage, icon:"md-home"},
-            { title: 'Upload', component: HomePage, icon: "md-cloud-upload" },
-            { title: 'Profile', component: ProfilePage, icon: "md-person"},
             { title: 'Gallery', component: GalleryPage, icon:"md-images" },
-            { title: 'Messages', component: SeeMessagesPage, icon: "md-mail"},
+            { title: 'Profile', component: ProfilePage, icon: "md-person"},
+            { title: 'Messages', component: SeeMessagesPage, icon: "md-mail" },
             { title: 'Log-Out', component: LogoutPage, icon: "md-log-out"}
           ];
            this.rootPage =  ArtisthomePage;
         }
         else if (data == "ScoutPerson"){
+
           this.pages = [
-            { title: 'Home', component: ScoutPage, icon: "home" },
+            { title: 'Home', component: ScoutPage, icon: "md-home" },
             { title: 'Profile', component:ScouteProfilePage, icon: "md-person" },
-            { title: 'Log-Out', component: LogoutPage, icon: "log-out" },
-            { title: 'Messages', component: SeeMessagesPage, icon: "mail" }
+            { title: 'Log-Out', component: LogoutPage, icon: "md-log-out" },
+            { title: 'Messages', component: SeeMessagesPage, icon: "md-mail" }
           ];
           this.rootPage = ScoutPage;
         }
       })
+         this.rootPage = ArtisthomePage;
+        })
       }
       else{
        this.rootPage = LoginPage ;
       }
     })
   }
-
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

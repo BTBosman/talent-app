@@ -1,77 +1,49 @@
-<!--
- Generated template for the MessagePage page.
-
- See http://ionicframework.com/docs/components/#navigation for more info on
- Ionic pages and navigation.
--->
-
-
-
-
-    <ion-header>
-        <ion-navbar color = "own" >
-           <button ion-button menuToggle icon-only>
-               <ion-icon name='menu'></ion-icon>
-             </button>
-       <ion-title>
-       <h1>{{name}}</h1>
-       <h2>last seen {{lastSeen}}</h2> 
-       <ion-icon class="trash" name="trash"></ion-icon>
-       </ion-title>
-     </ion-navbar>
-    </ion-header>
-
-
 <ion-header>
-    <ion-navbar >
-       <button ion-button menuToggle icon-only>
-           <ion-icon name='menu'></ion-icon>
-         </button>
+  <ion-toolbar color = "own">
+         <button color = "own" ion-button (click)="goBack()"  >
+        <ion-icon name="md-arrow-round-back"></ion-icon>
+    </button>
    <ion-title>
+        <ion-avatar class="pics" item-start>
+                <img src={{img}}>
+            </ion-avatar>
    <h1>{{name}}</h1>
    <h2>last seen {{lastSeen}}</h2>
-   <ion-icon class="trash" name="trash"></ion-icon>
    </ion-title>
- </ion-navbar>
-</ion-header>
-
-
-
-
-
-
-<ion-content  class="img">
-
-
-<ion-card-content>
-
-  <ion-list *ngFor="let i of messages" [ngStyle]="i.float" no-lines >
+  
+  </ion-toolbar>
+ </ion-header>
+ 
+ 
+ 
+ 
+ <ion-content class="img" scrollDownOnLoad="true">
+ <ion-card-content>
+ <div  class="msg">
+  <ion-list *ngFor="let i of messages" [ngStyle]="i.float"  no-lines >
+        <ul>
     <ion-item class="item" class="reply" color={{i.color}}>
-      <p>{{i.message}}</p>
+      <ion-list>
+        <p text-wrap class="mesage" >{{i.message}}<span style="float: right;">{{i.date}}</span></p>
+    </ion-list>
     </ion-item>
+</ul>
   </ion-list>
-
- </ion-card-content>
-
-
-</ion-content>
-
-
-
-<ion-footer class="foot">
-
-    <div class="down">
-        <ion-item  class="item2" >
-            <textarea  #text class="comments" #comment type="text" cols="40" rows="5" placeholder="Type a message.."></textarea>
-          </ion-item>
-          </div>
-
-    <div >
-
-          <button class="send"  ion-button round color = "own" (click)="sendMessage(text.value)"><ion-icon name="md-send"></ion-icon></button>
-        </div>
-
-            
-   
-</ion-footer>
-
+</div>
+</ion-card-content>
+ </ion-content>
+ 
+ 
+ 
+ <ion-footer class="foot">
+ <div class="down">
+    <ion-item  class="item2" >
+        <textarea  #text class="comments" #comment type="text" cols="40" rows="5" placeholder="Type a message.." ></textarea>
+      </ion-item>
+      </div>
+ <div fixed bottom align=" right">
+      <button item-end class="send" ion-button round color = "own" (click)="sendMessage(text.value)"><ion-icon name="md-send" ></ion-icon></button>
+    </div>
+ 
+ 
+ </ion-footer>

@@ -6,49 +6,36 @@
 -->
 <ion-header>
 
-  <ion-navbar color="own">
-    <ion-title>gallery</ion-title>
-    <button ion-button menuToggle icon-only>
-        <ion-icon name='menu'></ion-icon>
-      </button>
-  </ion-navbar>
-
-</ion-header>
-
-<ion-content class="img" padding >
-  <h1>Your Videos</h1>
-    <ion-card class="col1" *ngFor="let i of myVideos;" >
-      <ion-row >
-          <ion-item (click)="profile(a)">
-              <ion-avatar item-start >
-                <img src="{{i.img}}">
-              </ion-avatar>
-              <h2><b>{{i.name}}</b></h2>
-              <!-- <p><b>{{i.vidname}}</b></p> -->
-            </ion-item>
-          <video width="390" height="120" controls>
-              <source src={{i.vidurl}} type="video/mp4">
-              <source src={{i.vidurl}} type="video/mkv">
-          </video>  
-          <br>
-          <br>
-          <button ion-button  icon-start clear small center>
-            <div>  {{i.date}}</div>
-            </button>
-      
-      </ion-row>
-    </ion-card>
-  </ion-content>
-
-<!-- <ion-content>
-<ion-grid *ngFor="let i of videos;">
-    <ion-row size="6">
-        <ion-col >
-            <video width="390" height="240" controls>
+    <ion-navbar color="own">
+      <ion-title>gallery</ion-title>
+      <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content class="img" padding >
+    <h1>Your Videos</h1>
+      <ion-card class="col1" *ngFor="let i of myVideos;" >
+        <ion-row >
+            <ion-item (click)="profile(a)">
+                <ion-avatar item-start >
+                  <img src="{{i.img}}">
+                </ion-avatar>
+                <h2><b>{{i.name}}</b></h2>
+                <!-- <p><b>{{i.vidname}}</b></p> -->
+              </ion-item>
+            <video width="390" height="120" controls>
                 <source src={{i.vidurl}} type="video/mp4">
-                  <source src={{i.vidurl}} type="video/mkv">
-              </video>
-        </ion-col>
-      </ion-row>
-</ion-grid>
-</ion-content> -->
+                <source src={{i.vidurl}} type="video/mkv">
+            </video>  
+            <br>
+            <br>
+            <button ion-button  icon-start clear small center>
+              <div>  {{i.date}}</div>
+              </button>
+        
+        </ion-row>
+      </ion-card>
+    </ion-content>

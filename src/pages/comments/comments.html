@@ -2,9 +2,8 @@
     <ion-navbar color = "own" >
       <ion-title>comments</ion-title>
     </ion-navbar>
-  
   </ion-header>
-    
+ 
 <ion-content *ngFor="let i of videos; let a =index" padding>
 
         <ion-item (click)="profile(a)">
@@ -13,13 +12,10 @@
           </ion-avatar>
          <h1><b>{{i.name}}</b></h1>
          <p>{{i.vidname}}</p>
-         </ion-item>
-
+        </ion-item>
           <ion-item>
         <video width="390" height="240" controls>
-
             <source src={{i.vidurl}} type="video/mp4">
-            
           </video>
           <p><b>{{i.vidDesc}}</b></p>
         </ion-item>
@@ -41,7 +37,7 @@
     <ion-list no-lines *ngFor="let a of comments2"  >
 
         <ion-item>
-          <ion-avatar class="pic" item-start>
+          <ion-avatar class="pics" item-start>
               <img src={{a.img}}>
           </ion-avatar>
           
@@ -57,4 +53,5 @@
      
       </ion-list>
 </div>
-</ion-content> 
+       
+</ion-content>

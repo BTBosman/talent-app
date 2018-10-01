@@ -1,34 +1,25 @@
-
 import { Component } from '@angular/core';
 import { RegisterPage } from '../register/register';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { FirebaseProvider} from '../../providers/firebase/firebase';
 import {login} from '../../Modals/login'
 import { ArtisthomePage } from '../artisthome/artisthome';
-import { UsersPage } from '../users/users';
-import { ScoutPage } from '../scout/scout';
+import {UserPage} from '../user/user';
 import { updateDimensions } from 'ionic-angular/components/virtual-scroll/virtual-util';
 import { UploadPreviewPage } from '../upload-preview/upload-preview';
 
-
-
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+ selector: 'page-login',
+ templateUrl: 'login.html',
 })
 export class LoginPage {
+ name;
+ users = {} as login;
 
-  name;
-
-  users = {} as login;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl:AlertController,private firebaseService:FirebaseProvider,public loadingCtrl:LoadingController) {
-  }
-  
-Reg(){
-  this.navCtrl.push(RegisterPage);
-}
+ constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl:AlertController,private firebaseService:FirebaseProvider,public loadingCtrl:LoadingController) {
+ 
+ }
 
 showForgotPassword(){
   const prompt = this.alertCtrl.create({
@@ -87,31 +78,15 @@ showForgotPassword(){
 
   login(){
     this.firebaseService.login(this.users.email,this.users.password).then(()=>{
-      const alert = this.alertCtrl.create({
-        title: 'Welcome',
-        message: 'You have successfully logged in',
-        buttons: ['OK']
-      });
-      alert.present();
-      this.firebaseService.getuserType().then(data =>{
-        console.log(data)
-        if (data == "normalPerson"){
-          window.location.reload();
-
-        }
-        else if (data == "talentPerson"){
-
-          window.location.reload();
-
-        }
-        else if (data == "ScoutPerson"){
-          window.location.reload();
-        }
-        else{
-            window.location.reload();
-        }
+      this.firebaseService.getuserType().then(() =>{
+        const alert = this.alertCtrl.create({
+          title: 'Welcome',
+          message: 'You have successfully logged in',
+          buttons: ['OK']
+        });
+        alert.present();
+        this.navCtrl.push(ArtisthomePage);
       })
-    
     }, Error =>{
       if (this.users.email == undefined && this.users.password == undefined){
         const alert = this.alertCtrl.create({
@@ -146,10 +121,4 @@ showForgotPassword(){
       }
     })
   }
-
-
-  uploadpreview=function(){
-    this.navCtrl.push(UploadPreviewPage)
-  }
-
 }

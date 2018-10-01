@@ -42,6 +42,7 @@ export class ScoutPage {
   
 
   }
+
   
    test(indexNUmber){
      this.navCtrl.push(CommentsPage, {vid:this.videos[indexNUmber]})

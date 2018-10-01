@@ -18,22 +18,24 @@
 <div align = "center" >
     <ion-list class="list" no-lines>
 
+        <ion-item class="items">
+            <ion-label ><ion-icon name="person" class="i"></ion-icon></ion-label>
+            <ion-input placeholder="Username" type="text" [(ngModel)]= "artist.username"></ion-input>
+          </ion-item>
+
       <ion-item>
         <ion-label ><ion-icon name="person" class="i"></ion-icon></ion-label>
         <ion-input type="text" placeholder="Name" [(ngModel)]= "artist.name"></ion-input>
       </ion-item>
 
 
-      <ion-item class="items">
-        <ion-label ><ion-icon name="person" class="i"></ion-icon></ion-label>
-        <ion-input placeholder="Surname" type="text" [(ngModel)]= "artist.surname"></ion-input>
-      </ion-item>
+    
 
         <ion-item class="items">
-            <ion-label ><ion-icon name="person" class="i"></ion-icon></ion-label>
-            <ion-input placeholder="Username" type="text" [(ngModel)]= "artist.username"></ion-input>
-          </ion-item>
-  
+          <ion-label ><ion-icon name="person" class="i"></ion-icon></ion-label>
+          <ion-input placeholder="Surname" type="text" [(ngModel)]= "artist.surname"></ion-input>
+        </ion-item>
+
         <ion-item class="items">
             <ion-label ><ion-icon name="at" class="i"></ion-icon></ion-label>
             <ion-input placeholder="E-mail" type="text"  [(ngModel)] = "artist.email"></ion-input>
@@ -51,6 +53,7 @@
                 <ion-option value="Male">Male</ion-option>
                 <ion-option value="Female">Female</ion-option>
               </ion-select>
+
           </ion-item>
     
           <ion-item class="items">

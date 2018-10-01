@@ -2,7 +2,7 @@
   <ion-header>
     <ion-navbar color = "own" >
 
-   <ion-title>Scout Home</ion-title>
+   <ion-title><ion-icon name="flame"></ion-icon>&emsp;Top Trending</ion-title>
    <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
     </button>
@@ -12,7 +12,7 @@
 
 <ion-content class="img">
 
-    <h1 align="center"><ion-icon name="flame"></ion-icon>&emsp;Top Trending</h1>
+    <!-- <h1 align="center"></h1> -->
 
     <div *ngFor="let i of videos; let a =index">
         <ion-card>
@@ -25,24 +25,23 @@
             </ion-item>
 
        
-         <!-- video -->
-         <!-- <video width="390" height="260" controls>
+        
+         <video width="390" height="260" controls>
              <source src={{i.vidurl}} type="video/mp4">
-             
-           </video> -->
+           </video> 
 
            <ion-card-content>
               <p>{{i.vidDesc}}</p>
               <ion-row>
                   <ion-col>
                     <button color={{i.color}} ion-button icon-start clear small (click)="like(a)">
-                      <ion-icon name="thumbs-up"></ion-icon>
+                      <ion-icon name="md-thumbs-up"></ion-icon>
                       <div>{{i.likes}} Likes</div>
                     </button>
                   </ion-col>
                   <ion-col>
                     <button  ion-button class="com" icon-start clear small center (click)="test(a)">
-                      <ion-icon name="text"></ion-icon>
+                      <ion-icon name="md-text"></ion-icon>
                       <div>{{i.comments}} Comments</div>
                     </button>
                   </ion-col>
@@ -58,7 +57,7 @@
 
     <ion-fab  fixed bottom right  >
       <button class="fabi" ion-fab  (click) = "Upload()" color = "own">
-        <ion-icon name="add"></ion-icon>  
+        <ion-icon name="md-add"></ion-icon>  
       </button>
     </ion-fab>
 

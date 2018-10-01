@@ -57,4 +57,5 @@ export class CommentsPage {
     console.log(a);
     modal.present();
   }
-}
+
+ }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { ScoutProfileUpdatePage } from '../scout-profile-update/scout-profile-update';
 
 /**
  * Generated class for the ScouteProfilePage page.
@@ -28,5 +29,8 @@ export class ScouteProfilePage {
     console.log(this.scout);
     })
     
+  }
+  update(){
+    this.navCtrl.push(ScoutProfileUpdatePage)
   }
 }
